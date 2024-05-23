@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.booking-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.booking-form h2 {
+    margin-bottom: 20px;
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-form form label {
+    text-align: left;
+}
+
+.booking-form form input,
+.booking-form form select,
+.booking-form form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.booking-form form button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.booking-form form button:hover {
+    background-color: #c0392b;
+}
