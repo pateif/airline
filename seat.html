@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="seat-selection">
+            <h2>Select seat(s) in the seat map</h2>
+            <div class="legend">
+                <p><span class="available"></span> Available seat</p>
+                <p><span class="selected"></span> Selected seat</p>
+                <p><span class="occupied"></span> Occupied seat</p>
+                <p><span class="exit-row"></span> Exit seat row</p>
+            </div>
+            <div class="seat-map" id="seat-map">
+                <!-- Seats will be generated here by JavaScript -->
+            </div>
+            <div class="selected-seat-info">
+                <h3>Seat selection</h3>
+                <p id="selected-seats">You have selected: None</p>
+                <button id="reset-seats">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
