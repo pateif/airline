@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.seat-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legend {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.legend p {
+    margin: 0 10px;
+}
+
+.legend span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.available {
+    background-color: #28a745;
+}
+
+.selected {
+    background-color: #ffc107;
+}
+
+.occupied {
+    background-color: #dc3545;
+}
+
+.exit-row {
+    background-color: #17a2b8;
+}
+
+.seat-map {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    background-color: #28a745;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.seat.occupied {
+    background-color: #dc3545;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: #ffc107;
+}
+
+.seat.exit-row {
+    background-color: #17a2b8;
+}
+
+.selected-seat-info {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
