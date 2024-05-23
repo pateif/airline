@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low-Cost Airline Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Low-Cost Airline Booking</h1>
+        <div class="form-container">
+            <div id="login-form">
+                <h2>Login</h2>
+                <form id="login">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <p id="login-error" class="error"></p>
+            </div>
+            <div id="booking-form" style="display: none;">
+                <h2>Book a Seat</h2>
+                <form id="booking">
+                    <label for="seat">Select Seat:</label>
+                    <select id="seat" name="seat" required>
+                        <option value="">Choose a seat</option>
+                        <option value="1A">1A</option>
+                        <option value="1B">1B</option>
+                        <option value="1C">1C</option>
+                        <!-- Add more seat options as needed -->
+                    </select>
+                    <button type="submit">Book Seat</button>
+                </form>
+                <p id="booking-error" class="error"></p>
+                <p id="booking-success" class="success"></p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
