@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('path/to/your/background/image.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .booking-form {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            width: 500px;
+        }
+        .booking-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: calc(100% - 10px);
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        .form-inline {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-inline .form-group {
+            width: 48%;
+        }
+        .counter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .counter button {
+            background: #ffcc00;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .counter input {
+            width: 30px;
+            text-align: center;
+            border: none;
+            background: none;
+            color: #fff;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-form">
+        <h1>Flight Ticket Booking</h1>
+        <div class="form-group">
+            <label for="from">From</label>
+            <input type="text" id="from" placeholder="Type Departure City">
+        </div>
+        <div class="form-group">
+            <label for="to">To</label>
+            <input type="text" id="to" placeholder="Type Destination City">
+        </div>
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="depart">Depart</label>
+                <input type="date" id="depart">
+                <label>
+                    <input type="checkbox" id="flexible-depart"> Flexible with date
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="return">Return</label>
+                <input type="date" id="return">
+                <label>
+                    <input type="checkbox" id="flexible-return"> Flexible with date
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="class">Class</label>
+            <select id="class">
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first">First</option>
+            </select>
+        </div>
+        <div class="form-inline">
+            <div class="form-group">
+                <label>Adult (12+ yrs)</label>
+                <div class="counter">
+                    <button type="button" onclick="decrement('adult')">-</button>
+                    <input type="text" id="adult" value="1" readonly>
+                    <button type="button" onclick="increment('adult')">+</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Child (2-11 yrs)</label>
+                <div class="counter">
+                    <button type="button" onclick="decrement('child')">-</button>
+                    <input type="text" id="child" value="1" readonly>
+                    <button type="button" onclick="increment('child')">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="button">Search Flights</button>
+        </div>
+    </div>
+
+    <script>
+        function increment(type) {
+            const input = document.getElementById(type);
+            let value = parseInt(input.value);
+            input.value = value + 1;
+        }
+
+        function decrement(type) {
+            const input = document.getElementById(type);
+            let value = parseInt(input.value);
+            if (value > 1) {
+                input.value = value - 1;
+            }
+        }
+    </script>
+</body>
+</html>
