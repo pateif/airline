@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Book Flight</a></li>
+                <li><a href="#">Flight Management</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+            <div class="user-info">
+                <span>Welcome, Nilesh Kapse</span>
+                <img src="user-icon.png" alt="User Icon">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="booking-form">
+            <h2>Flight Booking</h2>
+            <form id="flight-booking-form">
+                <label for="flying-from">Flying From</label>
+                <input type="text" id="flying-from" name="flying-from" placeholder="Pune">
+
+                <label for="flying-to">Flying To</label>
+                <input type="text" id="flying-to" name="flying-to" placeholder="Bangalore">
+
+                <label for="departing">Departing</label>
+                <input type="date" id="departing" name="departing" value="2022-04-27">
+
+                <label for="returning">Returning</label>
+                <input type="date" id="returning" name="returning" value="2022-04-30">
+
+                <label for="adults">Adults (18+)</label>
+                <input type="number" id="adults" name="adults" value="1" min="1">
+
+                <label for="children">Children (0-17)</label>
+                <input type="number" id="children" name="children" value="1" min="0">
+
+                <label for="travel-class">Travel Class</label>
+                <select id="travel-class" name="travel-class">
+                    <option value="any">Any</option>
+                    <option value="economy">Economy</option>
+                    <option value="business">Business</option>
+                    <option value="first-class">First Class</option>
+                </select>
+
+                <button type="button" onclick="showFlights()">Show Flights</button>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
